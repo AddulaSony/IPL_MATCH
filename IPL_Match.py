@@ -152,7 +152,7 @@ a
 # In[ ]:
 
 
-print(matches.info())
+print(data.info())
 
 # In[110]:
 
