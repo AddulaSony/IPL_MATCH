@@ -152,8 +152,7 @@ a
 # In[ ]:
 
 
-get_ipython().run_line_magic('pinfo', 'matches')
-
+print(matches.info())
 
 # In[110]:
 
