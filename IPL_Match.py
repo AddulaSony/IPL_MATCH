@@ -11,7 +11,7 @@ import streamlit as st
 # In[2]:
 
 
-data=pd.read_csv(r"C:\Users\sai sharath reddy\Downloads\matches(1).csv")
+data=pd.read_csv("matches(1).csv")
 
 
 # In[3]:
