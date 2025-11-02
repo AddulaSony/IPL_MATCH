@@ -165,7 +165,9 @@ win
 # In[ ]:
 
 
-get_ipython().run_line_magic('pinfo', 'winning')
+data['Toss_Win'] = data['Toss_Winner'] == data['Winners']
+city_win = data.pivot_table(values='Toss_Win', index='City', columns='Toss_Decision', aggfunc='mean')
+print(city_win[city_win['field'] > city_win['bat']])
 
 
 # In[111]:
@@ -180,7 +182,8 @@ print(field_success_city.sort_values(ascending=False).dropna())
 # In[ ]:
 
 
-get_ipython().run_line_magic('pinfo', 'venue')
+venue_win = data.pivot_table(values='Toss_Win', index='Location', columns='Toss_Decision', aggfunc='mean')
+print(venue_win.idxmax(axis=1))
 
 
 # In[112]:
